@@ -1,0 +1,27 @@
+/*MEDIA QUERIES*/
+@media (max-width: 548px) {
+  html {
+    font-size: 52.5%;
+  }
+
+  .main-container {
+    margin: 16rem auto;
+    max-width: 45rem;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .main-container {
+    max-width: 45rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .main-container {
+    max-width: 42rem;
+  }
+}

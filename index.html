@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>To-Do App</title>
+    <link href="index.css" rel="stylesheet" />
+    <link href="responsive.css" rel="stylesheet" />
+    <script type="module" src="index.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-div">
+        <div class="top-div-upper">
+          <ion-icon
+            class="check-icon"
+            name="checkmark-circle-outline"></ion-icon>
+          <p class="top-text">My tasks</p>
+        </div>
+        <p class="top-date"></p>
+      </div>
+      <div class="input-div">
+        <form class="task-form">
+          <input
+            class="input-field"
+            type="text"
+            placeholder="What do you need to do?" />
+          <button type="submit" class="form-btn">+</button>
+        </form>
+      </div>
+      <div class="sorting-div">
+        <p class="sorting-btn sorting-btn-active all-btn">All</p>
+        <p class="sorting-btn active-btn">Active</p>
+        <p class="sorting-btn completed-btn">Completed</p>
+      </div>
+      <div class="tasks-div">
+        <form>
+          <!--     <div class="task">
+            <input type="checkbox" data-num="1" class="checkbox" />
+            <p data-task="1" class="task-text">Workout later</p>
+          </div>
+          <div class="task">
+            <input type="checkbox" data-num="2" class="checkbox" />
+            <p data-task="2" class="task-text">Study session</p>
+          </div>
+          <div class="task completed">
+            <input type="checkbox" data-num="3" class="checkbox" />
+            <p data-task="3" class="task-text">Walk the dog</p>
+          </div> -->
+        </form>
+
+        <div class="empty-tasks-div">
+          <ion-icon name="document-text-outline" class="empty-icon"></ion-icon>
+          <p class="empty-text">No tasks here yet</p>
+        </div>
+      </div>
+      <div class="information-div">
+        <p class="tasks-number-info"><span>0</span> tasks left</p>
+        <p class="clear-btn">Clear completed</p>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
