@@ -90,6 +90,7 @@ const app = function () {
 
   /*Adding tasks*/
   taskForm.addEventListener("submit", function (e) {
+    console.log("SUBMIT OKINUO");
     e.preventDefault();
     let taskID = String(Date.now()).slice(-5);
     let newTask = { id: taskID, taskText: inputField.value, status: "active" };
