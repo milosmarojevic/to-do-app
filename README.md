@@ -1,3 +1,3 @@
-#To-Do-Application
+# To-Do-Application
 
 A small application for tracking your daily tasks.
