@@ -88,7 +88,7 @@ const app = function () {
   });
 
   /*Adding tasks*/
-  submitBtn.addEventListener("click", function (e) {
+  tasksContainer.addEventListener("submit", function (e) {
     e.preventDefault();
     let taskID = String(Date.now()).slice(-5);
     let newTask = { id: taskID, taskText: inputField.value, status: "active" };
