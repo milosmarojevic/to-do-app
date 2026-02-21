@@ -14,7 +14,8 @@ const weekdays = [
 const dateText = document.querySelector(".top-date");
 const inputField = document.querySelector(".input-field");
 const submitBtn = document.querySelector(".form-btn");
-const tasksContainer = document.querySelector(".tasks-div form");
+const taskForm = document.querySelector(".task-form");
+const tasksContainer = document.querySelector(".tasks-div");
 const allButton = document.querySelector(".all-btn");
 const activeButton = document.querySelector(".active-btn");
 const completedButton = document.querySelector(".completed-btn");
@@ -88,7 +89,7 @@ const app = function () {
   });
 
   /*Adding tasks*/
-  tasksContainer.addEventListener("submit", function (e) {
+  taskForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let taskID = String(Date.now()).slice(-5);
     let newTask = { id: taskID, taskText: inputField.value, status: "active" };
