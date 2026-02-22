@@ -9,32 +9,68 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
   background-color: var(--color-background);
+
+  transition: all 0.5s;
 }
 
 /* VARIABLES */
 :root {
   --color-primary: #3b5bdb;
   --color-background: #e0e4e6;
+  --color-text-light: #f7f7f7;
   --color-background-main: #f2f6f8;
   --font-regular-color: #303438;
   --font-unfocused-color: #868e95;
   --padding-standard: 1rem 1.5rem 2rem 1.5rem;
   --color-shadow: #bec0c3;
+  --color-toggle-bar: #7b8085;
+  --color-toggle-circle: #e4e6e8;
+}
+
+:root[data-theme="dark"] {
+  --color-primary: #4c68db;
+  --color-background: #0f1419;
+  --color-background-main: #151b22;
+  --font-regular-color: #e6e9ec;
+  --font-unfocused-color: #cad4de;
+  --color-text-light: #f7f7f7;
+  --color-shadow: rgba(0, 0, 0, 0.6);
+  --color-toggle-bar: #2c3440;
+  --color-toggle-circle: #e6e9ec;
 }
 
 /* APP */
+
+.toggle-bar {
+  background-color: var(--color-toggle-bar);
+  height: 2.5rem;
+  width: 5rem;
+  position: absolute;
+  top: -5rem;
+  right: 2rem;
+  border-radius: 5rem;
+  box-shadow: 0 0 5rem var(--color-shadow);
+}
+
+.toggle-circle {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--color-toggle-circle);
+  border-radius: 50%;
+  transition: all 0.6s;
+}
 
 .main-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
+  position: relative;
   font-size: 1.6rem;
   max-width: 50rem;
 
   border-radius: 10px;
   margin: 10rem auto;
-  overflow: hidden;
+
   background-color: var(--color-background-main);
   box-shadow: 0 0 5rem var(--color-shadow);
 }
@@ -44,8 +80,10 @@ html {
   gap: 0.5rem;
   flex-direction: column;
   padding: 2rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: var(--color-primary);
-  color: var(--color-background-main);
+  color: var(--color-text-light);
 }
 
 .top-div-upper {
@@ -69,7 +107,7 @@ html {
 
 .input-div {
   padding: var(--padding-standard);
-  border-bottom: 1px solid var(--color-shadow);
+  border-bottom: 1px solid var(--font-regular-color);
 }
 
 .task-form {
@@ -112,7 +150,7 @@ html {
 
   align-items: center;
   padding: var(--padding-standard);
-  border-bottom: 1px solid var(--color-shadow);
+  border-bottom: 1px solid var(--font-regular-color);
 }
 
 .sorting-btn {
@@ -130,7 +168,7 @@ html {
   height: 20rem;
   min-height: 15rem;
   padding: var(--padding-standard);
-  border-bottom: 1px solid var(--color-shadow);
+  border-bottom: 1px solid var(--font-regular-color);
   position: relative;
 }
 
@@ -180,6 +218,10 @@ html {
   display: flex;
   gap: 1rem;
   font-size: 1.7rem;
+}
+
+.task-text {
+  color: var(--font-regular-color);
 }
 
 .completed p {

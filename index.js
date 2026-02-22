@@ -7,13 +7,12 @@ const months = [
 ];
 // prettier-ignore
 const weekdays = [
-  "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday",
+ "Sunday","Tuesday","Wednesday","Thursday","Friday","Saturday"
 ];
 
 /*Selections*/
 const dateText = document.querySelector(".top-date");
 const inputField = document.querySelector(".input-field");
-const submitBtn = document.querySelector(".form-btn");
 const taskForm = document.querySelector(".task-form");
 const tasksContainer = document.querySelector(".tasks-div .inner");
 const allButton = document.querySelector(".all-btn");
@@ -23,10 +22,12 @@ const sortingBtns = document.querySelectorAll(".sorting-btn");
 const tasksNumber = document.querySelector(".tasks-number-info span");
 const clearBtn = document.querySelector(".clear-btn");
 const emptyDiv = document.querySelector(".empty-tasks-div");
+const toggleBar = document.querySelector(".toggle-bar");
+const toggleCircle = document.querySelector(".toggle-circle");
 
 const app = function () {
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
+  let toggled = false;
   /*Sorting and rendering*/
 
   const renderHTML = function (task) {
@@ -128,11 +129,27 @@ const app = function () {
     updateTaskNum(tasks);
   });
 
+  /*Dark mode*/
+  toggleCircle.addEventListener("click", function () {
+    if (!toggled) {
+      toggleCircle.style.transform = "translateX(100%)";
+      toggled = true;
+      document.documentElement.dataset.theme = "dark";
+      return;
+    }
+    if (toggled) {
+      toggleCircle.style.transform = "translateX(0)";
+      toggled = false;
+      document.documentElement.removeAttribute("data-theme");
+    }
+  });
+
   /*Setting the date*/
   const setDate = function () {
     const date = new Date();
-    dateText.textContent = `${weekdays[date.getDay() - 1]}, ${months[date.getMonth()]} ${date.getDate()}`;
+    dateText.textContent = `${weekdays[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}`;
   };
+
   setDate();
 };
 
