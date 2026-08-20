@@ -1,0 +1,19 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "To-Do-List application which lets users track their daily habits.",
+  "license": "ISC",
+  "author": "Milos Marojevic",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "core-js": "^3.50.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milos|To-Do-List</title>
+    <link href="index.css" rel="stylesheet" />
+    <link href="queries.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">To-Do-List 📋</h2>
+      <div class="inputs-container">
+        <input
+          type="text"
+          class="input-field"
+          name="task-input"
+          placeholder="Add your task" />
+        <button type="submit" class="task-btn">Add</button>
+      </div>
+      <div class="tasks-container"></div>
+      <button class="clear-all-btn">Clear Completed</button>
+      <ion-icon name="sunny-outline" class="mode-button"></ion-icon>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

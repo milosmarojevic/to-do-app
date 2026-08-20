@@ -1,0 +1,232 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 62.5%;
+}
+
+/* VARIABLES */
+:root {
+  --color-background-first: #2b3c93;
+  --color-background-second: #662277;
+  --color-container: #f1f3f5;
+  --color-title: #283e97;
+  --color-input-field: #ced4da;
+  --color-checkbox-outline: #9fadbd;
+  --color-font: #343a40;
+  --color-font-crossed: #687480;
+  --color-btn: #f77f24;
+  --color-btn-hover: #d87123;
+  --color-btn-text: #f7f7f7;
+  --color-btn-mode: #f59e0b;
+  --color-btn-mode-outline: #f4e3ab;
+  --color-btn-completed: #282b2e;
+}
+
+.dark-mode {
+  --color-background-first: #111827;
+  --color-background-second: #312e81;
+  --color-container: #1f2937;
+  --color-title: #a5b4fc;
+  --color-input-field: #374151;
+  --color-checkbox-outline: #6b7280;
+  --color-font: #f3f4f6;
+  --color-font-crossed: #cfd9ea;
+  --color-btn: #f97316;
+  --color-btn-hover: #ea580c;
+  --color-btn-text: #ffffff;
+  --color-btn-mode: #1a1035;
+  --color-btn-mode-outline: #e8dfd6;
+  --color-btn-completed: #c5cdd5;
+}
+
+/* APP */
+body {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-background-first),
+    var(--color-background-second)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  color: var(--color-font);
+}
+
+body,
+.container,
+.task,
+.input-field,
+.complete-task-btn,
+.mode-btn {
+  transition: all 0.3s ease;
+}
+
+html {
+  color: var(--color-font);
+}
+
+.container {
+  background-color: var(--color-container);
+  width: 50rem;
+  max-height: 57rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+
+  padding: 3rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.title {
+  color: var(--color-title);
+  margin: 0.5rem 0 3rem 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.inputs-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.tasks-container {
+  max-height: 34rem;
+  overflow: scroll;
+  margin-bottom: 0.5rem;
+}
+
+.tasks-container::-webkit-scrollbar {
+  display: none;
+}
+
+.input-field {
+  width: 80%;
+  height: 5rem;
+  outline: none;
+  border-radius: 3rem;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  border: none;
+  background-color: var(--color-input-field);
+  color: var(--color-font);
+}
+
+.task-btn {
+  width: 30%;
+  position: absolute;
+  right: 0;
+  height: 5rem;
+  border-radius: 3rem;
+  outline: none;
+  border: none;
+  background-color: var(--color-btn);
+  color: var(--color-btn-text);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.task-btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.task-and-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.task-checkbox {
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid var(--color-checkbox-outline);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.task-checkbox:checked {
+  background-color: var(--color-btn);
+  border: none;
+}
+
+.task-checkbox:checked:after {
+  content: "✓";
+  color: var(--color-container);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+}
+
+.task-label {
+  cursor: pointer;
+}
+
+.crossed {
+  text-decoration: line-through;
+  color: var(--color-font-crossed);
+}
+
+.complete-task-btn {
+  outline: none;
+  border: none;
+  font-size: 1.9rem;
+  color: var(--color-btn-completed);
+  cursor: pointer;
+  font-family: inherit;
+  height: 1rem;
+  background: none;
+}
+
+.clear-all-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+
+  font-family: inherit;
+  color: var(--color-font-crossed);
+}
+
+.clear-all-btn:hover {
+  text-decoration: underline;
+}
+
+.mode-button {
+  font-size: 3rem;
+  background-color: var(--color-btn-mode);
+  color: var(--color-btn-mode-outline);
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}

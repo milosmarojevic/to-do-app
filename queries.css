@@ -1,0 +1,18 @@
+/* MEDIA QUERIES */
+@media (max-width: 560px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 490px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 43.75%;
+  }
+}
