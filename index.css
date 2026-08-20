@@ -74,7 +74,8 @@ html {
 
 .container {
   background-color: var(--color-container);
-  width: 50rem;
+  width: 90%;
+  max-width: 50rem;
   max-height: 57rem;
   position: absolute;
   top: 30%;
