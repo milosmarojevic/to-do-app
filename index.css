@@ -54,7 +54,7 @@ body {
   );
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   color: var(--color-font);
 }
@@ -77,15 +77,14 @@ html {
   width: 90%;
   max-width: 50rem;
   max-height: 57rem;
+  margin: 0 auto;
   position: absolute;
-  top: 30%;
+  top: 4rem;
   left: 50%;
-  transform: translate(-50%, -25%);
-
+  transform: translateX(-50%);
   padding: 3rem;
   font-size: 1.6rem;
   border-radius: 1rem;
-  position: relative;
 }
 
 .title {
